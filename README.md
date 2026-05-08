@@ -16,6 +16,7 @@ Ensure the `LFDAQIngester` project is cloned into the root directory of the proj
 Run `docker compose up`
 
 The QuestDB web console will be available at `localhost:9000`
+
 The grafana web console will be available at `localhost:3000`
 
 The machine this repo targets attempts to commit using @julianhooks julian.delb.hooks@gmail.com. Change as desired.
