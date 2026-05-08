@@ -5,8 +5,13 @@
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
 - Create internal network to handle ingester to DB and grafana to DB traffic
 
+  - See [Networking with Compose](https://docs.docker.com/compose/how-tos/networking/)
+  - There's a chance that this doesn't do anything if the docker engine is smart about networking, but I think since the `liquids.lan` URL resolves to `192.168.8.10` and not a subnet allocated in the default network, traffic still goes through the switch and could clog up the network
+  - The big question I have is whether or not a device with `network_mode:host`, like the LFDAQIngester, can still connect with the internal network
+
 **[IN-PROGRESS]** _05/07/2026_ @julianhooks to @julianhooks
-- Add `schema.sql` to keep track of database schemas
+- [DONE] Add `schema.sql` to keep track of database schemas
+- [TO-DO] Setup QuestDB to load `schema.sql` on start up
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
 - Write `LFDAQInstaller` install scripts
