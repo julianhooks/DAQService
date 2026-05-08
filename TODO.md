@@ -5,7 +5,7 @@
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
 - Create internal network to handle ingester to DB and grafana to DB traffic
 
-**[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
+**[IN-PROGRESS]** _05/07/2026_ @julianhooks to @julianhooks
 - Add `schema.sql` to keep track of database schemas
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
