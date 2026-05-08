@@ -3,30 +3,22 @@
 `[{status}] _{date}_ {assigner git user} to {assignee git user}` 
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Fix DOCKERFILE to install drivers one stage before installing python requirements
+- Create internal network to handle ingester to DB and grafana to DB traffic
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Fix DOCKERFILE to install correct drivers for system architecture
+- Add `schema.sql` to keep track of database schemas
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Fix over-flushing bug in questDB ingress handler
-  - There is an autoflush option for the handler that we should turn on
+- Write `LFDAQInstaller` install scripts
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Set up a better logging configuration (debug level in stream when in debug mode, info level in file and stream when in prod)
+- Convert `instruments.json` to `instruments.yaml`
+  - [TO-DO] Add a script to convert yaml file to SQL writes to update instrument values
+  - [TO-DO] Document yaml format
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Refactor `setup()` into `getInstruments()` `getLabJack()` `getIngestHandle()` `userConfig()`
+- Write notes on system design in `architecture.md`
 
 **[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Fix `getInstruments()`, `getIngestHandle` to get login credentials from environment variables
-
-**[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Build out calibration function namespace
-
-**[TO-DO]** _05/07/2026_ @julianhooks to @julianhooks
-- Develop testing plan in testing.md 
-
-**[DONE]** _05/07/2026_ @julianhooks to @julianhooks 
-- Fix bug in instrument loading loop where all instruments are loaded regardless of active status or labjack status.
+- Write testing plan in `testing.md`
 
