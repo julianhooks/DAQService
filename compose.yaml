@@ -1,0 +1,36 @@
+services:
+  questdb:
+    image: questdb/questdb:9.3.4
+    ports:
+      - "8812:8812"
+      - "9000:9000"
+      - "9009:9009"
+    volumes:
+      - "questdb-data:/var/lib/questdb"
+    restart: unless-stopped
+ 
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - "grafana-data:/var/lib/grafana"
+      - "grafana-config:/etc/grafana"
+    restart: unless-stopped
+    environment:
+      - GF_INSTALL_PLUGINS=questdb-questdb-datasource 
+      - GF_DASHBOARDS_MIN_REFRESH_INTERVAL=50ms
+  
+  ingester:
+    build:
+      context: ./LFDAQIngester
+    environment:
+      - DBURL=liquids.lan
+      - LOOPDELAY=200
+    network_mode: host
+    restart: unless-stopped
+
+volumes:
+  questdb-data:
+  grafana-data:
+  grafana-config:
